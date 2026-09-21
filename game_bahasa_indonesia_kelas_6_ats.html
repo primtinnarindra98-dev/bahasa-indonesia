@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petualangan Bahasa Indonesia Kelas 6 - Persiapan ATS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#3B82F6',
+                            purple: '#8B5CF6',
+                            pink: '#EC4899',
+                            yellow: '#F59E0B',
+                            green: '#10B981',
+                            dark: '#1E293B'
+                        }
+                    },
+                    fontFamily: {
+                        fredoka: ['Fredoka', 'sans-serif'],
+                        nunito: ['Nunito', 'sans-serif'],
+                        cinzel: ['Cinzel', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f3e8ff 50%, #fce7f3 100%);
+            min-height: 100vh;
+        }
+        .heading-font {
+            font-family: 'Fredoka', sans-serif;
+        }
+        .cert-font {
+            font-family: 'Cinzel', serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .btn-bounce {
+            transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .btn-bounce:hover {
+            transform: translateY(-4px) scale(1.02);
+        }
+        .btn-bounce:active {
+            transform: translateY(2px) scale(0.98);
+        }
+        .option-card {
+            transition: all 0.2s ease;
+        }
+        .option-card:hover {
+            transform: translateX(6px);
+        }
+        
+        /* Certificate Print Styling */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #printable-certificate, #printable-certificate * {
+                visibility: visible;
+            }
+            #printable-certificate {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-brand-purple selection:text-white pb-12">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-40 border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-brand-blue to-brand-purple text-white flex items-center justify-center font-bold text-xl shadow-md">
+                    <i class="fa-solid font-bold fa-book-open"></i>
+                </div>
+                <div>
+                    <h1 class="heading-font text-lg font-bold text-slate-800 leading-tight">Master Bahasa Indonesia</h1>
+                    <p class="text-xs text-brand-purple font-semibold">Persiapan ATS Semester 1 Kelas 6</p>
+                </div>
+            </div>
+            <div class="text-right text-xs text-slate-500 font-medium">
+                <span class="inline-block bg-slate-100 border border-slate-200 px-3 py-1 rounded-full">
+                    <i class="fa-solid fa-code-branch text-brand-blue mr-1"></i> Developer: <strong class="text-slate-700">Giga Inovation</strong> (081329200985)
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 mt-6">
+
+        <!-- SECTION 1: WELCOME & REGISTRATION SCREEN -->
+        <section id="screen-welcome" class="block">
+            <div class="glass-card rounded-3xl p-6 sm:p-10 max-w-2xl mx-auto text-center border-t-8 border-brand-purple">
+                <div class="inline-flex p-4 rounded-full bg-purple-100 text-brand-purple mb-4 text-4xl shadow-inner">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h2 class="heading-font text-2xl sm:text-3xl font-extrabold text-slate-800 mb-2">
+                    Ayo Siap Hadapi ATS Bahasa Indonesia!
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base mb-6 max-w-lg mx-auto">
+                    Selamat datang pejuang prestasi kelas 6! Sebelum memulai simulasi 50 soal latihan ATS, yuk pelajari dulu ringkasan materinya agar nilaimu maksimal dan mendapat <strong>Sertifikat Penghargaan</strong>!
+                </p>
+
+                <form id="form-start" onsubmit="handleStart(event)" class="space-y-4 max-w-md mx-auto text-left">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+                            <i class="fa-solid fa-user text-brand-purple mr-1"></i> Nama Lengkap Murid:
+                        </label>
+                        <input type="text" id="input-student-name" required placeholder="Masukkan nama lengkapmu..." 
+                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:border-transparent font-semibold text-slate-800 shadow-sm text-base">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+                            <i class="fa-solid fa-school text-brand-blue mr-1"></i> Asal Sekolah / Kelas:
+                        </label>
+                        <input type="text" id="input-school-name" placeholder="Contoh: SDN 01 Merdeka / Kelas 6A" 
+                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent font-semibold text-slate-800 shadow-sm text-base">
+                    </div>
+
+                    <div class="pt-2">
+                        <button type="submit" class="w-full btn-bounce py-4 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+                            <span>Mulai Belajar Materi</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Developer Tag Footer -->
+                <div class="mt-8 pt-4 border-t border-slate-200/80 text-xs text-slate-500">
+                    <p><i class="fa-solid fa-laptop-code text-brand-purple"></i> Pengembang Media Pembelajaran:</p>
+                    <p class="font-bold text-slate-700 text-sm mt-0.5">Giga Inovation &bull; WhatsApp: 081329200985</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: STUDY MATERIALS (MATERI RINGKASAN) -->
+        <section id="screen-materi" class="hidden">
+            <div class="glass-card rounded-3xl p-6 sm:p-8">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 pb-4 border-b border-slate-200">
+                    <div>
+                        <span class="bg-purple-100 text-brand-purple text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Tahap 1: Ringkasan Materi</span>
+                        <h2 class="heading-font text-2xl font-bold text-slate-800 mt-1">Materi Bahasa Indonesia Semester 1 (Kelas 6)</h2>
+                        <p class="text-xs text-slate-500">Pelajari rangkuman ini sebelum melangkah ke tantangan 50 soal ATS!</p>
+                    </div>
+                    <button onclick="goToQuiz()" class="btn-bounce px-6 py-3 bg-brand-green text-white rounded-xl font-bold text-sm shadow-md hover:bg-emerald-600 flex items-center gap-2 shrink-0">
+                        <i class="fa-solid fa-gamepad text-base"></i>
+                        <span>Sudah Paham! Mulai Game 50 Soal</span>
+                    </button>
+                </div>
+
+                <!-- Tabs Navigation for Topics -->
+                <div class="flex overflow-x-auto gap-2 pb-2 mb-6 custom-scrollbar" id="material-tabs">
+                    <!-- Dynamic tabs rendered by JS -->
+                </div>
+
+                <!-- Tab Content Area -->
+                <div id="material-content-box" class="bg-slate-50/80 rounded-2xl p-5 border border-slate-200 min-h-[300px]">
+                    <!-- Dynamic material content rendered here -->
+                </div>
+
+                <div class="mt-6 flex justify-between items-center pt-4 border-t border-slate-200">
+                    <p class="text-xs text-slate-500 italic"><i class="fa-solid fa-lightbulb text-yellow-500 mr-1"></i> Tips: Baca setiap rangkuman dengan cermat agar bisa menjawab 50 soal dengan cepat dan benar!</p>
+                    <button onclick="goToQuiz()" class="btn-bounce px-6 py-3 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-xl font-bold text-sm shadow-md flex items-center gap-2">
+                        <span>Lanjut ke Game Soal</span>
+                        <i class="fa-solid fa-circle-play"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: INTERACTIVE GAME QUIZ (50 SOAL) -->
+        <section id="screen-quiz" class="hidden">
+            <!-- Quiz Top Bar -->
+            <div class="glass-card rounded-2xl p-4 mb-4 flex flex-wrap justify-between items-center gap-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-purple flex items-center justify-center font-bold text-lg">
+                        <span id="quiz-student-avatar">👤</span>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-500 font-semibold">Peserta Ujian:</div>
+                        <div id="quiz-student-display" class="font-bold text-slate-800 text-sm">Siswa</div>
+                    </div>
+                </div>
+
+                <!-- Score & Streak Badge -->
+                <div class="flex items-center gap-4">
+                    <div class="text-center px-3 py-1 bg-amber-50 border border-amber-200 rounded-xl">
+                        <span class="text-xs text-amber-600 block font-bold">Skor Saat Ini</span>
+                        <span id="quiz-score" class="heading-font font-black text-amber-600 text-lg">0</span>
+                    </div>
+                    <div class="text-center px-3 py-1 bg-purple-50 border border-purple-200 rounded-xl">
+                        <span class="text-xs text-brand-purple block font-bold">Streak</span>
+                        <span id="quiz-streak" class="heading-font font-black text-brand-purple text-lg">🔥 0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Question Box -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8 relative">
+                <!-- Progress Header -->
+                <div class="mb-6">
+                    <div class="flex justify-between items-center text-xs font-bold text-slate-600 mb-2">
+                        <span><i class="fa-solid fa-list-check text-brand-blue mr-1"></i> Soal No. <span id="current-q-num">1</span> dari 50</span>
+                        <span id="q-category-tag" class="bg-blue-100 text-brand-blue px-2.5 py-0.5 rounded-full">Teks Laporan</span>
+                    </div>
+                    <!-- Progress Bar -->
+                    <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
+                        <div id="quiz-progress-bar" class="bg-gradient-to-r from-brand-blue to-brand-purple h-full rounded-full transition-all duration-300" style="width: 2%"></div>
+                    </div>
+                </div>
+
+                <!-- Question Text -->
+                <div class="mb-6">
+                    <h3 id="question-text" class="text-lg sm:text-xl font-bold text-slate-800 leading-relaxed">
+                        Loading pertanyaan...
+                    </h3>
+                    <div id="question-context" class="mt-2 text-sm bg-slate-100 p-3 rounded-xl border border-slate-200 italic text-slate-700 hidden">
+                        <!-- Context snippet if needed -->
+                    </div>
+                </div>
+
+                <!-- Answer Options -->
+                <div id="options-container" class="grid grid-cols-1 gap-3 mb-6">
+                    <!-- Dynamic option buttons rendered here -->
+                </div>
+
+                <!-- Explanation Box (Appears after answering) -->
+                <div id="explanation-box" class="hidden mb-6 p-4 rounded-2xl bg-blue-50 border-2 border-brand-blue/30 text-sm">
+                    <div class="flex items-center gap-2 font-bold text-brand-blue mb-1" id="explanation-title">
+                        <i class="fa-solid fa-circle-info"></i> Pembahasan Soal:
+                    </div>
+                    <p id="explanation-text" class="text-slate-700 leading-relaxed"></p>
+                </div>
+
+                <!-- Next Button Container -->
+                <div class="flex justify-end pt-2 border-t border-slate-200">
+                    <button id="btn-next" onclick="nextQuestion()" disabled class="btn-bounce px-6 py-3 bg-slate-300 text-slate-500 rounded-xl font-bold text-sm shadow-md cursor-not-allowed flex items-center gap-2">
+                        <span>Pertanyaan Selanjutnya</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CERTIFICATE OF ACHIEVEMENT (SERTIFIKAT PENGHARGAAN) -->
+        <section id="screen-certificate" class="hidden">
+            <div class="text-center mb-6 no-print">
+                <span class="bg-emerald-100 text-emerald-800 font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider">
+                    🎉 Selamat! Kamu Telah Menyelesaikan 50 Soal ATS!
+                </span>
+                <h2 class="heading-font text-2xl font-black text-slate-800 mt-2">Sertifikat Penghargaan Hasil Latihan</h2>
+                <p class="text-sm text-slate-600 max-w-md mx-auto">Cetak atau simpan sertifikat ini sebagai bukti persiapan belajar ATS Bahasa Indonesia Semester 1.</p>
+                
+                <div class="mt-4 flex flex-wrap justify-center gap-3">
+                    <button onclick="window.print()" class="btn-bounce px-5 py-2.5 bg-brand-purple text-white rounded-xl font-bold text-sm shadow-md hover:bg-purple-700 flex items-center gap-2">
+                        <i class="fa-solid fa-print"></i> Cetak / Simpan PDF
+                    </button>
+                    <button onclick="restartGame()" class="btn-bounce px-5 py-2.5 bg-slate-700 text-white rounded-xl font-bold text-sm shadow-md hover:bg-slate-800 flex items-center gap-2">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Ulangi Latihan
+                    </button>
+                </div>
+            </div>
+
+            <!-- Certificate Printable Container -->
+            <div id="printable-certificate" class="bg-white rounded-3xl p-8 sm:p-12 border-[12px] border-double border-amber-500 shadow-2xl max-w-4xl mx-auto relative overflow-hidden my-4 text-center">
+                <!-- Background decorative elements -->
+                <div class="absolute top-0 left-0 w-32 h-32 bg-amber-100/50 rounded-br-full -z-0"></div>
+                <div class="absolute bottom-0 right-0 w-32 h-32 bg-purple-100/50 rounded-tl-full -z-0"></div>
+                
+                <div class="relative z-10 border-4 border-amber-300 p-6 sm:p-8 rounded-2xl bg-amber-50/20">
+                    <!-- Certificate Header -->
+                    <div class="flex justify-center items-center gap-3 mb-2">
+                        <div class="w-12 h-12 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl shadow-md">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                    </div>
+                    <h1 class="cert-font text-2xl sm:text-4xl font-bold text-amber-900 tracking-wider uppercase mb-1">
+                        Sertifikat Penghargaan
+                    </h1>
+                    <p class="text-xs sm:text-sm text-amber-700 uppercase tracking-widest font-bold border-b-2 border-amber-300 pb-3 max-w-md mx-auto">
+                        Asesmen Tengah Semester (ATS) - Bahasa Indonesia Kelas 6
+                    </p>
+
+                    <p class="text-slate-600 text-sm mt-6 italic">Sertifikat ini secara resmi diberikan kepada:</p>
+                    
+                    <!-- Student Name -->
+                    <h2 id="cert-student-name" class="heading-font text-2xl sm:text-4xl font-extrabold text-slate-800 my-2 underline decoration-amber-400 decoration-wavy">
+                        [Nama Siswa]
+                    </h2>
+                    <p id="cert-school-name" class="text-sm font-semibold text-slate-600 mb-6">[Asal Sekolah]</p>
+
+                    <p class="text-slate-700 text-sm max-w-xl mx-auto leading-relaxed">
+                        Telah berhasil menyelesaikan seluruh <strong>50 Soal Evaluasi Simulasi ATS Bahasa Indonesia Semester 1</strong> dengan pencapaian sebagai berikut:
+                    </p>
+
+                    <!-- Score Box -->
+                    <div class="my-6 inline-flex items-center justify-center gap-6 bg-white px-8 py-4 rounded-2xl border-2 border-amber-300 shadow-sm">
+                        <div>
+                            <span class="text-xs text-slate-500 block font-bold uppercase">Nilai Akhir</span>
+                            <span id="cert-final-score" class="heading-font text-3xl font-black text-brand-purple">100</span>
+                        </div>
+                        <div class="h-10 w-0.5 bg-slate-200"></div>
+                        <div>
+                            <span class="text-xs text-slate-500 block font-bold uppercase">Predikat</span>
+                            <span id="cert-predicate" class="heading-font text-xl font-bold text-emerald-600">SANGAT BAIK</span>
+                        </div>
+                        <div class="h-10 w-0.5 bg-slate-200"></div>
+                        <div>
+                            <span class="text-xs text-slate-500 block font-bold uppercase">Benar</span>
+                            <span id="cert-correct-count" class="heading-font text-xl font-bold text-brand-blue">50 / 50</span>
+                        </div>
+                    </div>
+
+                    <!-- Footer Signatures & Date -->
+                    <div class="mt-8 pt-6 border-t border-amber-200 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs text-slate-600">
+                        <div class="text-left">
+                            <p class="font-semibold text-slate-500">Tanggal Penyelesaian:</p>
+                            <p id="cert-date" class="font-bold text-slate-800 text-sm">21 September 2026</p>
+                        </div>
+
+                        <!-- Badge Stamp -->
+                        <div class="w-20 h-20 rounded-full border-4 border-dashed border-amber-500 flex flex-col items-center justify-center text-amber-700 rotate-12 bg-amber-100/80 shadow-sm">
+                            <i class="fa-solid fa-stamp text-lg"></i>
+                            <span class="text-[9px] font-black uppercase tracking-tighter mt-0.5">LULUS ATS</span>
+                        </div>
+
+                        <div class="text-right">
+                            <p class="font-semibold text-slate-500">Pengembang Sistem:</p>
+                            <p class="font-black text-brand-purple text-sm">Giga Inovation</p>
+                            <p class="text-[11px] text-slate-500">WA: 081329200985</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Audio Synthesizer for sound effects without external file dependencies
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        
+        function playSound(type) {
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            if (type === 'correct') {
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+                osc.frequency.exponentialRampToValueAtTime(659.25, audioCtx.currentTime + 0.1); // E5
+                osc.frequency.exponentialRampToValueAtTime(783.99, audioCtx.currentTime + 0.2); // G5
+                gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.35);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.35);
+            } else if (type === 'wrong') {
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(300, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(150, audioCtx.currentTime + 0.25);
+                gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.25);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.25);
+            } else if (type === 'finish') {
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+                osc.frequency.setValueAtTime(554.37, audioCtx.currentTime + 0.15);
+                osc.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.3);
+                osc.frequency.setValueAtTime(880, audioCtx.currentTime + 0.45);
+                gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.7);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.7);
+            }
+        }
+
+        const MATERI_DATA = [
+            {
+                id: 'materi-1',
+                title: '1. Teks Laporan Pengamatan',
+                icon: 'fa-clipboard-list',
+                color: 'text-blue-600 bg-blue-100',
+                content: `
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">Teks Laporan Hasil Pengamatan</h3>
+                    <p class="mb-3 text-slate-700">Teks yang berisi informasi berdasarkan pengamatan secara langsung terhadap objek, tempat, atau peristiwa.</p>
+                    <div class="bg-white p-3 rounded-xl border border-slate-200 mb-3">
+                        <strong class="text-brand-blue block mb-1">Struktur Teks Laporan:</strong>
+                        <ul class="list-disc pl-5 space-y-1 text-xs text-slate-700">
+                            <td><strong>1. Informasi Umum:</strong> Berisi nama pengamatan, lokasi, waktu, dan objek yang diamati.</td><br>
+                            <td><strong>2. Isi Laporan/Fakta:</strong> Kumpulan informasi dan hasil pengamatan nyata.</td><br>
+                            <td><strong>3. Kesimpulan:</strong> Intisari dari seluruh hasil pengamatan.</td>
+                        </ul>
+                    </div>
+                    <div class="bg-amber-50 p-3 rounded-xl border border-amber-200 text-xs text-amber-900">
+                        <strong>Cara Menentukan Kesimpulan:</strong> Baca teks keseluruhan, temukan ide pokok tiap paragraf, lalu gabungkan dengan kata-kata sendiri secara ringkas.
+                    </div>
+                `
+            },
+            {
+                id: 'materi-2',
+                title: '2. Teks Eksplanasi Ilmiah',
+                icon: 'fa-flask',
+                color: 'text-purple-600 bg-purple-100',
+                content: `
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">Teks Eksplanasi Ilmiah</h3>
+                    <p class="mb-3 text-slate-700">Teks yang menjelaskan proses terjadinya suatu fenomena alam, sosial, ilmu pengetahuan, atau budaya (contoh: proses listrik sampai ke rumah, proses penemuan lampu).</p>
+                    <div class="bg-white p-3 rounded-xl border border-slate-200 mb-3">
+                        <strong class="text-brand-purple block mb-1">Struktur Teks Eksplanasi:</strong>
+                        <ol class="list-decimal pl-5 space-y-1 text-xs text-slate-700">
+                            <td><strong>Pernyataan Umum (Pembuka):</strong> Gambaran umum tentang peristiwa/kejadian.</td><br>
+                            <td><strong>Deretan Penjelas (Isi):</strong> Uraian sebab-akibat dan proses secara berurutan.</td><br>
+                            <td><strong>Interpretasi / Kesimpulan (Penutup):</strong> Pendapat singkat penulis atau pesan pengamat.</td>
+                        </ol>
+                    </div>
+                `
+            },
+            {
+                id: 'materi-3',
+                title: '3. Formulir Pendaftaran',
+                icon: 'fa-id-card',
+                color: 'text-emerald-600 bg-emerald-100',
+                content: `
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">Teks Formulir</h3>
+                    <p class="mb-3 text-slate-700">Formulir adalah lembaran atau kertas berisi pertanyaan resmi yang harus diisi dengan data diri yang jujur dan benar.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3 text-xs">
+                        <div class="bg-white p-3 rounded-xl border border-slate-200">
+                            <strong class="text-emerald-700 block mb-1">Bagian Formulir:</strong>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-700">
+                                <td><strong>Kepala (Header):</strong> Nama lembaga, alamat, logo.</td>
+                                <td><strong>Tubuh (Isi):</strong> Data pribadi (nama, TTL, alamat, agama).</td>
+                                <td><strong>Ekor (Footer):</strong> Tanda tangan, tempat, dan tanggal pengisian.</td>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-slate-200">
+                            <strong class="text-emerald-700 block mb-1">Jenis-jenis Formulir:</strong>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-700">
+                                <td>Formulir pendaftaran ekstra kurikuler</td>
+                                <td>Slip setoran bank / wesel pos</td>
+                                <td>Daftar Riwayat Hidup (CV)</td>
+                                <td>Kartu Anggota Perpustakaan</td>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: 'materi-4',
+                title: '4. Kalimat Efektif & Kata Baku',
+                icon: 'fa-pen-nib',
+                color: 'text-amber-600 bg-amber-100',
+                content: `
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">Kalimat Efektif & Kata Baku</h3>
+                    <p class="mb-3 text-slate-700"><strong>Kalimat Efektif</strong> adalah kalimat yang disusun sesuai kaidah tata bahasa (SPOK), hemat kata, dan mudah dipahami pendengar/pembaca.</p>
+                    <div class="bg-white p-3 rounded-xl border border-slate-200 mb-3 text-xs space-y-2">
+                        <p><strong>Ciri Kalimat Efektif:</strong> Memiliki Subjek & Predikat yang jelas, tidak bermakna ganda (ambigu), tidak boros kata.</p>
+                        <p class="text-red-600">❌ Salah (Boros): <em>Para siswa-siswa sedang saling tolong-menolong.</em></p>
+                        <p class="text-emerald-600">✔ Benar: <em>Para siswa sedang tolong-menolong.</em></p>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-slate-200 text-xs">
+                        <strong class="text-amber-700 block mb-1">Contoh Kata Baku vs Tidak Baku:</strong>
+                        <div class="grid grid-cols-2 gap-2 text-slate-700">
+                            <div>✔ <strong>Baku:</strong> Apotek, Jadwal, Kebersihan, Izin, Praktik, Nasihat</div>
+                            <div>❌ <strong>Tidak Baku:</strong> Apotik, Jadwal, Kebersihan, Ijin, Praktek, Nasehat</div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: 'materi-5',
+                title: '5. Unsur Intrinsik Cerita & Majas',
+                icon: 'fa-book-bookmark',
+                color: 'text-pink-600 bg-pink-100',
+                content: `
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">Unsur Intrinsik & Gaya Bahasa (Majas)</h3>
+                    <p class="mb-2 text-slate-700"><strong>Unsur Intrinsik Cerita:</strong> Tema, Tokoh & Perwatakan, Latar (Tempat, Waktu, Suasana), Alur, Amanat (Pesan moral).</p>
+                    <div class="bg-white p-3 rounded-xl border border-slate-200 text-xs space-y-2">
+                        <strong class="text-pink-600 block">Majas yang sering keluar di ATS:</strong>
+                        <ul class="list-disc pl-4 space-y-1 text-slate-700">
+                            <td><strong>Personifikasi:</strong> Benda mati seolah hidup. (Contoh: <em>Pena itu menari-nari di atas kertas.</em>)</td>
+                            <td><strong>Metafora:</strong> Kiasan langsung tanpa kata pembanding. (Contoh: <em>Dia adalah anak emas Pak Guru.</em>)</td>
+                            <td><strong>Hiperbola:</strong> Mengungkapkan sesuatu secara berlebihan. (Contoh: <em>Suaranya menggelegar membelah angkasa.</em>)</td>
+                        </ul>
+                    </div>
+                `
+            }
+        ];
+
+        const QUESTIONS_50 = [
+            // 1 - 10: Teks Laporan Hasil Pengamatan
+            {
+                q: "Teks yang berisi informasi berdasarkan pengamatan secara langsung terhadap suatu tempat, objek, atau peristiwa dinamakan ...",
+                options: ["Teks Eksplanasi", "Teks Laporan Hasil Pengamatan", "Teks Formulir", "Teks Narasi Fiksi"],
+                answer: 1,
+                category: "Laporan Pengamatan",
+                explanation: "Teks laporan hasil pengamatan dibuat berdasarkan hasil observasi/pengamatan langsung terhadap suatu tempat atau objek nyata."
+            },
+            {
+                q: "Bagian struktur teks laporan hasil pengamatan yang berisi intisari dari hasil pengamatan dinamakan ...",
+                options: ["Latar Belakang", "Deretan Penjelas", "Kesimpulan", "Pernyataan Umum"],
+                answer: 2,
+                category: "Laporan Pengamatan",
+                explanation: "Kesimpulan berada di bagian akhir teks laporan yang memuat inti keseluruhan hasil pengamatan."
+            },
+            {
+                q: "Bacalah kutipan teks berikut: 'Tumbuhan hijau membutuhkan cahaya matahari untuk fotosintesis. Tanpa cahaya matahari, tumbuhan tidak dapat menghasilkan makanan sendiri.' Topik utama paragraf tersebut adalah ...",
+                options: ["Manfaat daun hijau", "Pentingnya cahaya matahari bagi fotosintesis Tumbuhan", "Jenis-jenis tumbuhan hijau", "Proses fotosintesis pada malam hari"],
+                answer: 1,
+                category: "Laporan Pengamatan",
+                explanation: "Teks menjelaskan secara rinci ketergantungan tumbuhan hijau terhadap cahaya matahari saat fotosintesis."
+            },
+            {
+                q: "Informasi yang dimasukkan ke dalam teks laporan hasil pengamatan harus bersifat ...",
+                options: ["Fakta dan nyata", "Khayalan penulis", "Opini pribadi tanpa bukti", "Dongeng masyarakat"],
+                answer: 0,
+                category: "Laporan Pengamatan",
+                explanation: "Laporan pengamatan bersifat objektif sehingga harus memuat fakta yang sebenarnya terjadi di lapangan."
+            },
+            {
+                q: "Bagian teks laporan pengamatan yang memuat informasi mengenai waktu, tempat, dan objek yang diamati terletak pada ...",
+                options: ["Kesimpulan", "Informasi umum / Pendahuluan", "Saran", "Daftar pustaka"],
+                answer: 1,
+                category: "Laporan Pengamatan",
+                explanation: "Informasi umum mencakup identitas pengamatan seperti tempat, tanggal, nama pengamat, dan objek pengamatan."
+            },
+            {
+                q: "Langkah pertama dalam menentukan ide pokok suatu paragraf pada teks laporan adalah ...",
+                options: ["Menulis ulang seluruh isi teks", "Membaca keseluruhan teks dengan cermat", "Mencari kata serapan", "Mengubah kalimat baku"],
+                answer: 1,
+                category: "Laporan Pengamatan",
+                explanation: "Untuk menemukan ide pokok, pembaca wajib membaca paragraf secara cermat dari awal hingga akhir."
+            },
+            {
+                q: "Ide pokok biasanya dapat ditemukan pada kalimat utama yang terletak di awal paragraf. Paragraf ini disebut paragraf ...",
+                options: ["Induktif", "Deduktif", "Campuran", "Deskriptif"],
+                answer: 1,
+                category: "Laporan Pengamatan",
+                explanation: "Paragraf Deduktif memiliki kalimat utama di awal paragraf (D = Depan)."
+            },
+            {
+                q: "Jika kalimat utama berada di akhir paragraf, maka paragraf tersebut dinamakan paragraf ...",
+                options: ["Deduktif", "Induktif", "Korelatif", "Ineratif"],
+                answer: 1,
+                category: "Laporan Pengamatan",
+                explanation: "Paragraf Induktif adalah paragraf yang kalimat utamanya berada di bagian akhir."
+            },
+            {
+                q: "Berikut ini yang BUKAN merupakan ciri-ciri kesimpulan yang baik adalah ...",
+                options: ["Menggunakan bahasa yang runtut dan runtut", "Pesan tersampaikan kepada pembaca", "Berisi pendapat pribadi yang menyimpang dari fakta", "Menggunakan kata baku"],
+                answer: 2,
+                category: "Laporan Pengamatan",
+                explanation: "Kesimpulan harus sesuai dengan fakta dalam isi teks, tidak boleh menyimpang atau merekayasa fakta."
+            },
+            {
+                q: "Pengamatan terhadap perkecambahan biji kacang hijau dilakukan selama 7 hari. Data tinggi tanaman yang dicatat setiap hari termasuk ke dalam bagian ...",
+                options: ["Hasil / Isi Laporan", "Judul laporan", "Identitas pengamat", "Kesimpulan"],
+                answer: 0,
+                category: "Laporan Pengamatan",
+                explanation: "Catatan data harian merupakan fakta utama yang dimasukkan dalam isi/hasil laporan pengamatan."
+            },
+
+            // 11 - 20: Teks Eksplanasi Ilmiah
+            {
+                q: "Teks yang menjelaskan proses terjadinya fenomena alam, sosial, ilmu pengetahuan, atau budaya disebut teks ...",
+                options: ["Deskripsi", "Eksplanasi Ilmiah", "Persuasi", "Instruksi"],
+                answer: 1,
+                category: "Teks Eksplanasi",
+                explanation: "Teks eksplanasi ilmiah menerangkan proses 'mengapa' dan 'bagaimana' fenomena ilmiah dapat terjadi."
+            },
+            {
+                q: "Urutan struktur teks eksplanasi ilmiah yang tepat adalah ...",
+                options: ["Deretan penjelas -> Pernyataan umum -> Interpretasi", "Pernyataan umum -> Deretan penjelas -> Kesimpulan/Interpretasi", "Interpretasi -> Deretan penjelas -> Pernyataan umum", "Pernyataan umum -> Kesimpulan -> Deretan penjelas"],
+                answer: 1,
+                category: "Teks Eksplanasi",
+                explanation: "Struktur runtut teks eksplanasi: 1. Pernyataan Umum (Pembuka), 2. Deretan Penjelas (Isi proses), 3. Interpretasi (Kesimpulan/Penutup)."
+            },
+            {
+                q: "Bagian teks eksplanasi yang memuat gambaran umum tentang topik yang akan dibahas adalah ...",
+                options: ["Pernyataan umum", "Deretan penjelas", "Koda", "Penutup"],
+                answer: 0,
+                category: "Teks Eksplanasi",
+                explanation: "Pernyataan umum terdapat di paragraf pertama sebagai pengenalan topik yang dikaji."
+            },
+            {
+                q: "Bagian deretan penjelas dalam teks eksplanasi ilmiah memuat tentang ...",
+                options: ["Pengenalan tokoh cerita", "Urutan rincian proses terjadinya suatu peristiwa secara ilmiah", "Latar tempat dan suasana", "Biodata penemu"],
+                answer: 1,
+                category: "Teks Eksplanasi",
+                explanation: "Deretan penjelas berisi uraian fakta tentang alur/proses terjadinya fenomena secara mendalam."
+            },
+            {
+                q: "Siapakah tokoh yang dikenal sebagai penemu arus listrik yang dibahas dalam teks eksplanasi sejarah penemuan?",
+                options: ["Alexander Graham Bell", "Michael Faraday", "Thomas Alva Edison", "Nikola Tesla"],
+                answer: 1,
+                category: "Teks Eksplanasi",
+                explanation: "Michael Faraday adalah ilmuwan penemu arus listrik (penemu induksi elektromagnetik)."
+            },
+            {
+                q: "Kata sambung (konjungsi) yang sering digunakan dalam teks eksplanasi untuk menunjukkan hubungan sebab-akibat adalah ...",
+                options: ["Tetapi, namun, melainkan", "Oleh karena itu, sehingga, sebab", "Atau, serta, lagipula", "Meskipun, biarpun, jika"],
+                answer: 1,
+                category: "Teks Eksplanasi",
+                explanation: "Konjungsi kausalitas (sebab-akibat) seperti 'oleh karena itu', 'sebab', 'sehingga' sangat dominan dalam teks eksplanasi."
+            },
+            {
+                q: "Penemu lampu pijar yang berhasil mengubah peradaban dunia terang benderang di malam hari adalah ...",
+                options: ["Charles Goodyear", "Thomas Alva Edison", "Guglielmo Marconi", "Galileo Galilei"],
+                answer: 1,
+                category: "Teks Eksplanasi",
+                explanation: "Thomas Alva Edison terkenal dengan penemuannya berupa lampu pijar."
+            },
+            {
+                q: "Bacalah teks berikut: 'Rangkaian listrik seri disusun secara berurutan tanpa cabang. Jika satu lampu padam, maka lampu yang lain akan ikut padam.' Informasi kunci dari teks tersebut adalah ...",
+                options: ["Kelebihan rangkaian paralel", "Sifat dan ciri rangkaian listrik seri", "Cara membuat baterai", "Sejarah penemuan lampu"],
+                answer: 1,
+                category: "Teks Eksplanasi",
+                explanation: "Teks tersebut menjelaskan ciri utama rangkaian seri, yaitu disusun tanpa cabang dan padam bersama."
+            },
+            {
+                q: "Interpretasi dalam teks eksplanasi berisi tentang ...",
+                options: ["Pendapat / pandangan singkat penulis terhadap fenomena yang dijelaskan", "Daftar kata sulit", "Pertanyaan penulis kepada pembaca", "Biodata singkat penulis"],
+                answer: 0,
+                category: "Teks Eksplanasi",
+                explanation: "Interpretasi merupakan bagian penutup yang memuat simpulan atau tanggapan penulis."
+            },
+            {
+                q: "Kalimat berikut yang merupakan ciri bahasa ilmiah dalam teks eksplanasi adalah ...",
+                options: ["Dahulu kala ada naga membakar desa.", "Listrik dialirkan melalui kabel tembaga berbasis induksi elektromagnetik.", "Sungguh sangat indah pemandangan di sore hari.", "Ayo kawan kita hemat energi listrik!"],
+                answer: 1,
+                category: "Teks Eksplanasi",
+                explanation: "Kalimat pada opsi B mengandung istilah dan fakta teknis ilmiah."
+            },
+
+            // 21 - 30: Formulir Pendaftaran & Surat
+            {
+                q: "Lembaran kertas yang berisi pertanyaan resmi dan harus diisi sesuai identitas sebenarnya dinamakan ...",
+                options: ["Buku Harian", "Formulir", "Pengumuman", "Poster"],
+                answer: 1,
+                category: "Formulir",
+                explanation: "Formulir adalah lembaran resmi berisi isian data pribadi atau informasi tertulis."
+            },
+            {
+                q: "Hal utama yang harus diperhatikan dalam mengisi formulir pendaftaran adalah ...",
+                options: ["Mengisi dengan tulisan fiksi", "Mengisi data sesuai fakta yang sebenarnya", "Mengosongkan bagian nama", "Menggunakan nama samaran"],
+                answer: 1,
+                category: "Formulir",
+                explanation: "Formulir harus diisi dengan data jujur dan akurat sesuai fakta."
+            },
+            {
+                q: "Data TTL pada lembar formulir pendaftaran merupakan singkatan dari ...",
+                options: ["Tanggal Dan Tempat Lahir", "Tempat, Tanggal Lahir", "Tanda Tangan Lengkap", "Tahun Dan Tempat Lulus"],
+                answer: 1,
+                category: "Formulir",
+                explanation: "TTL singkatan baku dari 'Tempat, Tanggal Lahir'."
+            },
+            {
+                q: "Bagian formulir yang berisikan nama instansi, alamat lengkap, dan logo organisasi terletak di bagian ...",
+                options: ["Kepala Formulir (Header)", "Tubuh Formulir", "Ekor Formulir", "Lampiran"],
+                answer: 0,
+                category: "Formulir",
+                explanation: "Kepala (Header) berada di bagian paling atas formulir mencakup identitas organisasi."
+            },
+            {
+                q: "Pencantuman tanda tangan dan nama terang pada bagian akhir formulir berfungsi sebagai ...",
+                options: ["Pajangan pendaftaran", "Bukti keabsahan dan pertanggungjawaban data yang diisi", "Persyaratan hobi", "Bumbu pemanis kertas"],
+                answer: 1,
+                category: "Formulir",
+                explanation: "Tanda tangan menegaskan bahwa pengisi bertanggung jawab atas kebenaran data."
+            },
+            {
+                q: "Formulir yang digunakan seseorang untuk mengirimkan uang melalui kantor pos dinamakan ...",
+                options: ["Slip Gaji", "Wesel Pos", "Kartu Anggota", "Kuitansi Belanja"],
+                answer: 1,
+                category: "Formulir",
+                explanation: "Wesel pos adalah formulir resmi untuk layanan pengiriman uang lewat pos."
+            },
+            {
+                q: "Pengisian daftar riwayat hidup (CV) biasanya digunakan untuk ...",
+                options: ["Membeli barang di toko", "Melamar pekerjaan atau pendaftaran kegiatan resmi", "Mengirim surat ke sahabat", "Meminjam buku pelajaran teman"],
+                answer: 1,
+                category: "Formulir",
+                explanation: "Daftar riwayat hidup berisi rekam jejak pendidikan dan pengalaman untuk pendaftaran/lamaran."
+            },
+            {
+                q: "Penulisan tempat dan tanggal lahir yang BENAR sesuai kaidah ejaan adalah ...",
+                options: ["Jakarta: 12 Agustus 2012", "Jakarta, 12 Agustus 2012", "Jakarta 12 Agustus 2012", "Jakarta/12/Agustus/2012"],
+                answer: 1,
+                category: "Formulir",
+                explanation: "Penulisan tempat dan tanggal lahir dipisahkan tanda koma (,), contoh: Jakarta, 12 Agustus 2012."
+            },
+            {
+                q: "Bagian surat resmi yang TIDAK terdapat pada surat pribadi adalah ...",
+                options: ["Kop Surat (Kepala Surat) dan Nomor Surat", "Tanggal surat", "Nama pengirim", "Isi surat"],
+                answer: 0,
+                category: "Formulir & Surat",
+                explanation: "Kop surat, nomor surat, perihal, dan stempel lembaga hanya ada pada surat resmi."
+            },
+            {
+                q: "Kode pos pada pengisian alamat di formulir bertujuan untuk ...",
+                options: ["Mengetahui harga barang", "Mempermudah dan mempercepat sortir wilayah pengiriman pos", "Menentukan usia pengirim", "Sebagai nomor identitas siswa"],
+                answer: 1,
+                category: "Formulir",
+                explanation: "Kode pos mempermudah petugas memetakan wilayah administrasi tujuan."
+            },
+
+            // 31 - 40: Kalimat Efektif dan Kata Baku
+            {
+                q: "Manakah di bawah ini yang merupakan pasangan KATA BAKU yang tepat?",
+                options: ["Apotik - Praktek", "Apotek - Praktik", "Apotik - Praktik", "Apotek - Praktek"],
+                answer: 1,
+                category: "Kata Baku",
+                explanation: "Kata baku sesuai KBBI adalah 'Apotek' (bukan apotik) dan 'Praktik' (bukan praktek)."
+            },
+            {
+                q: "Kalimat di bawah ini yang tergolong KALIMAT EFEKTIF adalah ...",
+                options: ["Para siswa-siswa sedang berolahraga di lapangan.", "Siswa-siswa sedang berolahraga di lapangan.", "Para siswa-siswa semuanya sedang berolahraga di lapangan.", "Banyak siswa-siswa yang berolahraga di lapangan."],
+                answer: 1,
+                category: "Kalimat Efektif",
+                explanation: "Opsi B efektif. Opsi A, C, dan D boros kata ('Para' gabung 'siswa-siswa')."
+            },
+            {
+                q: "Bentuk baku dari kata yang dicetak miring: 'Robi membeli obat di *apotik* berdasarkan *resep* dokter' adalah ...",
+                options: ["Apotek", "Apotec", "Apotik", "Apotix"],
+                answer: 0,
+                category: "Kata Baku",
+                explanation: "Kata baku dari apotik adalah Apotek."
+            },
+            {
+                q: "Ciri utama dari kalimat efektif adalah ...",
+                options: ["Menggunakan bahasa gaul", "Sangat panjang dan berbelit-belit", "Mengikuti kaidah bahasa baku dan hemat kata", "Mengandung ungkapan sindiran"],
+                answer: 2,
+                category: "Kalimat Efektif",
+                explanation: "Kalimat efektif wajib padat, jelas, hemat kata, dan menggunakan kata baku."
+            },
+            {
+                q: "Ubahlah kalimat berikut agar menjadi kalimat efektif: 'Budi rajin belajar agar supaya lulus ujian.'",
+                options: ["Budi rajin belajar agar lulus ujian.", "Budi rajin belajar supaya agar lulus ujian.", "Budi rajin belajar agar supaya bisa lulus ujian.", "Agar supaya lulus ujian Budi rajin belajar."],
+                answer: 0,
+                category: "Kalimat Efektif",
+                explanation: "Penggunaan 'agar supaya' rancu/boros. Cukup pilih salah satu: 'agar' atau 'supaya'."
+            },
+            {
+                q: "Kata berikut yang TIDAK BAKU adalah ...",
+                options: ["Jadwal", "Izin", "Ijazah", "Nasehat"],
+                answer: 3,
+                category: "Kata Baku",
+                explanation: "Bentuk baku dari 'nasehat' adalah 'Nasihat'."
+            },
+            {
+                q: "Penulisan kata baku yang tepat untuk kegiatan mengamati adalah ...",
+                options: ["Analisa", "Analisis", "Analisais", "Analisaa"],
+                answer: 1,
+                category: "Kata Baku",
+                explanation: "Kata baku dalam KBBI adalah 'Analisis'."
+            },
+            {
+                q: "Bacalah kalimat ini: 'Siti menyiram bunga, sedangkan Edo menyapu halaman.' Kalimat majemuk ini dihubungkan oleh kata hubung ...",
+                options: ["Sebab", "Sedangkan", "Sehingga", "Karena"],
+                answer: 1,
+                category: "Kalimat Efektif",
+                explanation: "Konjungsi pertentangan/perbandingan dalam kalimat tersebut adalah 'sedangkan'."
+            },
+            {
+                q: "Bentuk kata baku untuk menunjukkan dokumen keterangan bertanda tangan pejabat adalah ...",
+                options: ["Sertifikat", "Sertipikat", "Sertifiqat", "Sartifikat"],
+                answer: 0,
+                category: "Kata Baku",
+                explanation: "Kata baku yang tepat adalah 'Sertifikat'."
+            },
+            {
+                q: "Kalimat yang menggunakan kata baku dengan tepat di bawah ini adalah ...",
+                options: ["Jadual ujian ATS sudah dibagikan.", "Jadwal ujian ATS sudah dibagikan.", "Jadwal ujian ATS sudah dibagikan.", "Jadwol ujian ATS sudah dibagikan."],
+                answer: 1,
+                category: "Kata Baku",
+                explanation: "Penulisan yang baku adalah 'Jadwal'."
+            },
+
+            // 41 - 50: Majas, Unsur Cerita, Ungkapan, Tokoh
+            {
+                q: "Majas yang melukiskan benda mati seolah-olah memiliki sifat hidup seperti manusia disebut majas ...",
+                options: ["Metafora", "Personifikasi", "Hiperbola", "Asosiasi"],
+                answer: 1,
+                category: "Majas & Cerita",
+                explanation: "Majas Personifikasi mengumpamakan benda mati berprilaku seperti manusia."
+            },
+            {
+                q: "Contoh kalimat yang mengandung majas PERSONIFIKASI adalah ...",
+                options: ["Pena itu menari-nari dengan indah di atas kertas.", "Suaranya menggelegar membelah bumi.", "Dia adalah bunga desa di kampung kami.", "Wajahnya tampan bak bulan purnama."],
+                answer: 0,
+                category: "Majas & Cerita",
+                explanation: "'Pena menari-nari' melukiskan pena (benda mati) seolah bisa menari seperti manusia."
+            },
+            {
+                q: "Ungkapan 'Anak emas' memiliki arti ...",
+                options: ["Anak yang tubuhnya terbuat dari emas", "Anak kesayangan", "Anak yang suka meminta uang", "Anak yang pandai bernyanyi"],
+                answer: 1,
+                category: "Ungkapan/Idiom",
+                explanation: "Idiom/Ungkapan 'anak emas' artinya anak kesayangan atau paling difavoritkan."
+            },
+            {
+                q: "Sifat atau karakter tokoh dalam suatu cerita dinamakan ...",
+                options: ["Latar", "Perwatakan / Penokohan", "Amanat", "Alur"],
+                answer: 1,
+                category: "Unsur Cerita",
+                explanation: "Perwatakan/Penokohan adalah gambaran watak/karakter dari tokoh cerita (misal: jahat, baik, pemalas)."
+            },
+            {
+                q: "Tokoh utama yang berwatak baik dalam cerita disebut tokoh ...",
+                options: ["Antagonis", "Protagonis", "Tritagonis", "Figuran"],
+                answer: 1,
+                category: "Unsur Cerita",
+                explanation: "Protagonis adalah tokoh utama yang memiliki watak baik."
+            },
+            {
+                q: "Pesan moral yang ingin disampaikan pengarang kepada pembaca melalui cerita dinamakan ...",
+                options: ["Tema", "Amanat", "Alur", "Sudut pandang"],
+                answer: 1,
+                category: "Unsur Cerita",
+                explanation: "Amanat adalah ajaran moral/pesan kebaikan dalam cerita."
+            },
+            {
+                q: "Majas yang mengungkapkan sesuatu secara berlebihan dan membesar-besarkan fakta adalah majas ...",
+                options: ["Hiperbola", "Metafora", "Litotes", "Ironi"],
+                answer: 0,
+                category: "Majas & Cerita",
+                explanation: "Majas Hiperbola berisikan pernyataan yang dilebih-lebihkan (hiperbolis)."
+            },
+            {
+                q: "Arti ungkapan 'Panjang tangan' adalah ...",
+                options: ["Suka bekerja keras", "Suka mencuri", "Suka membantu orang lain", "Memiliki tangan yang panjang"],
+                answer: 1,
+                category: "Ungkapan/Idiom",
+                explanation: "'Panjang tangan' adalah kiasan/ungkapan untuk orang yang suka mencuri."
+            },
+            {
+                q: "Tempat, waktu, dan suasana terjadinya peristiwa dalam cerita dinamakan ...",
+                options: ["Alur", "Latar / Setting", "Tema", "Sudut Pandang"],
+                answer: 1,
+                category: "Unsur Cerita",
+                explanation: "Latar (setting) mencakup waktu, tempat, dan suasana kejadian dalam cerita."
+            },
+            {
+                q: "Peribahasa 'Besar pasak daripada tiang' mengandung arti ...",
+                options: ["Pengeluaran lebih besar daripada pendapatan", "Pendapatan lebih besar dari pengeluaran", "Rumah yang tiangnya sangat besar", "Orang yang suka hemat berbelanja"],
+                answer: 0,
+                category: "Majas & Cerita",
+                explanation: "Peribahasa 'Besar pasak daripada tiang' menggambarkan belanja/pengeluaran yang melebihi penghasilan."
+            }
+        ];
+
+        let studentData = {
+            name: '',
+            school: ''
+        };
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let streak = 0;
+        let correctCount = 0;
+        let userAnswers = [];
+
+        // App Initialization on DOM Loaded
+        window.addEventListener('DOMContentLoaded', () => {
+            renderMaterialTabs();
+            selectMaterialTab(0);
+        });
+
+        function handleStart(e) {
+            e.preventDefault();
+            const nameInput = document.getElementById('input-student-name').value.trim();
+            const schoolInput = document.getElementById('input-school-name').value.trim();
+
+            if (!nameInput) return;
+
+            studentData.name = nameInput;
+            studentData.school = schoolInput || 'Kelas 6 SD';
+
+            document.getElementById('quiz-student-display').textContent = studentData.name;
+
+            // Transition from welcome to materials
+            document.getElementById('screen-welcome').classList.add('hidden');
+            document.getElementById('screen-materi').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderMaterialTabs() {
+            const tabsContainer = document.getElementById('material-tabs');
+            tabsContainer.innerHTML = '';
+
+            MATERI_DATA.forEach((mat, idx) => {
+                const btn = document.createElement('button');
+                btn.className = `px-4 py-2.5 rounded-xl font-bold text-xs whitespace-nowrap transition-all border flex items-center gap-2 ${
+                    idx === 0 
+                    ? 'bg-brand-purple text-white border-brand-purple shadow-sm' 
+                    : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100'
+                }`;
+                btn.id = `tab-btn-${idx}`;
+                btn.onclick = () => selectMaterialTab(idx);
+                btn.innerHTML = `<i class="fa-solid ${mat.icon}"></i> ${mat.title}`;
+                tabsContainer.appendChild(btn);
+            });
+        }
+
+        function selectMaterialTab(index) {
+            MATERI_DATA.forEach((_, idx) => {
+                const btn = document.getElementById(`tab-btn-${idx}`);
+                if (btn) {
+                    if (idx === index) {
+                        btn.className = 'px-4 py-2.5 rounded-xl font-bold text-xs whitespace-nowrap transition-all border flex items-center gap-2 bg-brand-purple text-white border-brand-purple shadow-sm';
+                    } else {
+                        btn.className = 'px-4 py-2.5 rounded-xl font-bold text-xs whitespace-nowrap transition-all border flex items-center gap-2 bg-white text-slate-600 border-slate-200 hover:bg-slate-100';
+                    }
+                }
+            });
+
+            const contentBox = document.getElementById('material-content-box');
+            contentBox.innerHTML = MATERI_DATA[index].content;
+        }
+
+        function goToQuiz() {
+            document.getElementById('screen-materi').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Reset Quiz Vars
+            currentQuestionIndex = 0;
+            score = 0;
+            streak = 0;
+            correctCount = 0;
+            userAnswers = [];
+            updateQuizHeader();
+            loadQuestion();
+        }
+
+        function updateQuizHeader() {
+            document.getElementById('quiz-score').textContent = score;
+            document.getElementById('quiz-streak').textContent = `🔥 ${streak}`;
+            const progress = ((currentQuestionIndex) / QUESTIONS_50.length) * 100;
+            document.getElementById('quiz-progress-bar').style.width = `${Math.max(2, progress)}%`;
+        }
+
+        function loadQuestion() {
+            const q = QUESTIONS_50[currentQuestionIndex];
+            document.getElementById('current-q-num').textContent = currentQuestionIndex + 1;
+            document.getElementById('q-category-tag').textContent = q.category;
+            document.getElementById('question-text').textContent = q.q;
+
+            // Reset explanation box
+            const expBox = document.getElementById('explanation-box');
+            expBox.classList.add('hidden');
+
+            // Reset Next Button
+            const btnNext = document.getElementById('btn-next');
+            btnNext.disabled = true;
+            btnNext.className = 'btn-bounce px-6 py-3 bg-slate-300 text-slate-500 rounded-xl font-bold text-sm shadow-md cursor-not-allowed flex items-center gap-2';
+
+            // Render options
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            const optionLabels = ['A', 'B', 'C', 'D'];
+
+            q.options.forEach((optText, idx) => {
+                const optBtn = document.createElement('button');
+                optBtn.className = 'option-card w-full p-4 rounded-2xl border-2 border-slate-200 bg-white text-left font-semibold text-slate-700 flex items-center gap-3 hover:border-brand-purple hover:bg-purple-50/50 shadow-sm transition-all';
+                optBtn.id = `opt-${idx}`;
+                optBtn.onclick = () => selectAnswer(idx);
+                
+                optBtn.innerHTML = `
+                    <span class="w-8 h-8 rounded-xl bg-slate-100 text-slate-600 font-black flex items-center justify-center text-xs shrink-0 border border-slate-300 opt-badge">
+                        ${optionLabels[idx]}
+                    </span>
+                    <span class="text-sm leading-snug">${optText}</span>
+                `;
+                optionsContainer.appendChild(optBtn);
+            });
+
+            updateQuizHeader();
+        }
+
+        function selectAnswer(selectedIndex) {
+            const q = QUESTIONS_50[currentQuestionIndex];
+            const isCorrect = (selectedIndex === q.answer);
+
+            // Save user choice
+            userAnswers[currentQuestionIndex] = selectedIndex;
+
+            // Disable all options
+            for (let i = 0; i < q.options.length; i++) {
+                const btn = document.getElementById(`opt-${i}`);
+                btn.onclick = null; // Remove handler
+                btn.classList.remove('hover:border-brand-purple', 'hover:bg-purple-50/50');
+                
+                if (i === q.answer) {
+                    // Highlight correct answer
+                    btn.classList.add('border-emerald-500', 'bg-emerald-50', 'text-emerald-900');
+                    btn.querySelector('.opt-badge').className = 'w-8 h-8 rounded-xl bg-emerald-500 text-white font-black flex items-center justify-center text-xs shrink-0';
+                    btn.querySelector('.opt-badge').innerHTML = '<i class="fa-solid fa-check"></i>';
+                } else if (i === selectedIndex && !isCorrect) {
+                    // Highlight wrong answer
+                    btn.classList.add('border-red-500', 'bg-red-50', 'text-red-900');
+                    btn.querySelector('.opt-badge').className = 'w-8 h-8 rounded-xl bg-red-500 text-white font-black flex items-center justify-center text-xs shrink-0';
+                    btn.querySelector('.opt-badge').innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                } else {
+                    btn.classList.add('opacity-50');
+                }
+            }
+
+            // Update scores & audio
+            if (isCorrect) {
+                playSound('correct');
+                correctCount++;
+                streak++;
+                score += 10 + (streak > 2 ? 5 : 0); // Bonus for streak
+            } else {
+                playSound('wrong');
+                streak = 0;
+            }
+
+            // Display Explanation
+            const expBox = document.getElementById('explanation-box');
+            const expTitle = document.getElementById('explanation-title');
+            const expText = document.getElementById('explanation-text');
+
+            if (isCorrect) {
+                expTitle.className = 'flex items-center gap-2 font-bold text-emerald-700 mb-1';
+                expTitle.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600"></i> Jawaban Kamu Benar! (+10 Poin)';
+            } else {
+                expTitle.className = 'flex items-center gap-2 font-bold text-red-700 mb-1';
+                expTitle.innerHTML = '<i class="fa-solid fa-circle-xmark text-red-600"></i> Jawaban Kurang Tepat';
+            }
+
+            expText.textContent = q.explanation;
+            expBox.classList.remove('hidden');
+
+            // Enable Next button
+            const btnNext = document.getElementById('btn-next');
+            btnNext.disabled = false;
+            btnNext.className = 'btn-bounce px-6 py-3 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-xl font-bold text-sm shadow-md hover:shadow-lg flex items-center gap-2 cursor-pointer';
+
+            updateQuizHeader();
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < QUESTIONS_50.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion();
+                window.scrollTo({ top: 100, behavior: 'smooth' });
+            } else {
+                finishQuiz();
+            }
+        }
+
+        function finishQuiz() {
+            playSound('finish');
+
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-certificate').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Calculate final percentage score (0-100)
+            const finalPercentage = Math.round((correctCount / QUESTIONS_50.length) * 100);
+
+            // Predicate
+            let predicate = 'CUKUP';
+            let predColor = 'text-amber-600';
+            if (finalPercentage >= 85) {
+                predicate = 'SANGAT BAIK';
+                predColor = 'text-emerald-600';
+            } else if (finalPercentage >= 70) {
+                predicate = 'BAIK';
+                predColor = 'text-blue-600';
+            }
+
+            // Populate Certificate
+            document.getElementById('cert-student-name').textContent = studentData.name;
+            document.getElementById('cert-school-name').textContent = studentData.school;
+            document.getElementById('cert-final-score').textContent = finalPercentage;
+            
+            const predEl = document.getElementById('cert-predicate');
+            predEl.textContent = predicate;
+            predEl.className = `heading-font text-xl font-bold ${predColor}`;
+
+            document.getElementById('cert-correct-count').textContent = `${correctCount} / ${QUESTIONS_50.length}`;
+
+            // Date
+            const now = new Date();
+            const options = { day: 'numeric', month: 'Long', year: 'numeric' };
+            const dateStr = now.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+            document.getElementById('cert-date').textContent = dateStr;
+        }
+
+        function restartGame() {
+            document.getElementById('screen-certificate').classList.add('hidden');
+            document.getElementById('screen-welcome').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
